@@ -1,0 +1,82 @@
+/*
+##################################################
+Modified - Oluwatomi
+Purpose - added attributes for added elements
+Instructor - Joey Kitson
+Since - 04/04/2021
+##################################################
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap'); /*Font imported*/
+
+* {
+    font-family: Montserrat;
+    font-weight: bold;
+}
+html {
+    /*font-family: Montserrat; !*Font used on website*!*/
+    background: linear-gradient(to top, #a8ff78, #78ffd6);
+    background-repeat: inherit;
+    height: 100%;
+}
+
+#container {
+    padding: 10px;
+    border: solid 1px grey;
+    width: 350px;
+    margin: 5px auto auto auto;
+    background-color: white;
+}
+.btnPosition{
+    text-align: center;
+}
+button{
+    background-color: #45b649;
+    border-radius: 5px;
+    border: none;
+}
+
+/*changed layout backgrounds*/
+
+#topArea fieldset {
+    margin: 10px auto 5px auto;
+    width:200px;
+    background-color: #a8ff78;
+    border: 1px solid black;
+}
+#topArea legend {
+    background-color: #a8ff78;
+}
+#bottomArea fieldset {
+    background-color: #78ffd6;
+    margin: auto;
+    width: 300px ;
+    border: 1px solid black;
+}
+#bottomArea legend {
+    background-color: #78ffd6;
+}
+h1{
+    text-align: center;
+    margin-bottom: 1px;
+    margin-top: 5px;
+}
+h5{
+    margin: 0px 12px 2px 1px;
+    text-align: right;
+}
+.display{
+    width: 130px;
+    height: 16px;
+}
+#changeButton{
+    text-align: center;
+}
+#toggleDark{
+    float: right;
+    border-radius: 10px;
+}
+#toggleLight{
+    float: left;
+    border-radius: 10px;
+}

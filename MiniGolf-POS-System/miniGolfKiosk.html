@@ -1,0 +1,106 @@
+<!-- 
+Name: Don Bowers
+Date: 
+Purpose: Demonstrate the use of forms and functions to create a mini golf business interface.
+
+Modified by:Oluwatomi
+Date: 02/04/2021
+Depedencies: Yes
+Purpose: Upgraded code by moving styling to a stylesheet and js to a js file, Updated the layout of the page, removed onclick/onchange.
+-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>Jillian's Putt Putt Par-Tee</title>
+    <noscript>
+        "You don't have Javascript turned on! In order for this page to function properly you must turn on Javascript."
+    </noscript>
+    <!--    Styling moved to stylesheet-->
+    <!--    JavaScript moved to a JS file-->
+    <link rel="stylesheet" href="stylesheet.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+            integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="utility.js"></script>
+</head>
+<body>
+
+<!--Buttons for light mode and dark mode-->
+
+<button type="button" id="toggleDark">
+    &#127761
+</button>
+<button type="button" id="toggleLight">
+    &#127774
+</button>
+
+<div id="container">
+    <h1>Jillian's Putt Putt Par-Tee ⛳</h1>
+    <h5>Point of Sale System</h5>
+    <!--    Horizontal rule added-->
+    <hr>
+    <!--    Changed Layout to top and bottom area-->
+    <div id="topArea">
+        <form>
+            <fieldset>
+                <legend>Players</legend>
+                <a title="(13 and older)">Adults</a>
+                <select id="adults">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select> $4 each<br><br>
+                <a title="(12 and under)">Children</a>
+                <select id="children">
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select> $2 each<br><br>
+            </fieldset>
+            <fieldset>
+                <legend>Discounts</legend>
+                <input type="radio" id="caa" name="discountGroup" value="CAA"/> CAA (10%)<br>
+                <input type="radio" id="mil" name="discountGroup" value="Military"/> Military
+                (25%)<br>
+                <input type="radio" id="fun" name="discountGroup" value="Fun Club Member"/>
+                FunClub Member (50%)<br>
+            </fieldset>
+        </form>
+        <br>
+        <br>
+    </div>
+
+    <div id="bottomArea">
+        <fieldset>
+            <legend>Totals</legend>
+            Number of Adults: <input type="text" class="display" id="numAdults" readonly="readonly"/> <span
+                id="totalAdultsDiv"></span><br><br>
+            Number of Children: <input type="text" class="display" id="numChildren" readonly="readonly"/> <span
+                id="totalChildrenDiv"></span><br><br>
+            Net Amount: <span id="totalBeforeTaxDiv"></span><br><br>
+            Gross Amount (including 10% tax): <span id="totalAfterTaxDiv"></span><br><br>
+            <div class="btnPosition">
+                <button type="button" id="changeButton">$CHANGE?</button>
+            </div>
+            <br>
+            <div id="changeOutput">
+                You owe the customer: <span id="changeDue"></span>
+            </div>
+            <hr>
+            Discounts Applied:<br>
+            <span id="discountString"></span>
+        </fieldset>
+    </div>
+    <br>
+    <div class="btnPosition">
+        <button type="button" id="resetBtn">Reset Form</button>
+    </div>
+    <br>
+</div>
+</body>
+</html>
